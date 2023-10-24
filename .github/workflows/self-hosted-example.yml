@@ -1,0 +1,12 @@
+name: Testing Self-Hosted Runner
+on:
+  workflow_dispatch:  
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Content
+        run: |
+          echo Ok
+          sleep 15s
