@@ -4,7 +4,7 @@ on:
 
 jobs:
   testing:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, prod]
     steps:
       - name: Echo Content
         run: |
