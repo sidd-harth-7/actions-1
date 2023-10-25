@@ -6,5 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Testing Secrets
-      run:
-        echo ${{ secrets.AWS_API_KEY }}
+      run: |
+        if [[ -z "${{ secrets.AWS_API_KEY }}" ]]; then
+           echo "Secret Not Found"
+           exit 1
+        else
+          echo "Secret Found"
+          exit 0
+        fi
