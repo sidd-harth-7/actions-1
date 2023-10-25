@@ -1,0 +1,10 @@
+name: Vault Demo
+on:
+  workflow_dispatch:
+jobs:
+  echo-vault-secret:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Testing Secrets
+      run:
+        echo ${{ secrets.AWS_API_KEY }}
